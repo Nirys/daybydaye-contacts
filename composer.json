@@ -1,0 +1,26 @@
+{
+    "name": "spirit-systems/daybyday-contacts",
+    "description": "Provide contacts for DayByDay CRM clients",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Kath Young",
+            "email": "kath2young@gmail.com"
+        }
+    ],
+    "autoload": {
+	    "psr-4": {
+		    "SpiritSystems\\DayByDay\\Contacts\\": "src/"
+	    }
+
+    },
+    "extra": {
+	    "laravel": {
+		    "providers": {
+			    "SpiritSystems\\DayByDay\\Contacts\\Providers\\DayByDayServiceProvider"
+		    }
+	    }
+    },
+    "require": {}
+}
