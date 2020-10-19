@@ -17,9 +17,9 @@
     },
     "extra": {
 	    "laravel": {
-		    "providers": {
+		    "providers":[ 
 			    "SpiritSystems\\DayByDay\\Contacts\\Providers\\DayByDayServiceProvider"
-		    }
+		    ]
 	    }
     },
     "require": {}
