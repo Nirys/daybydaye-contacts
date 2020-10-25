@@ -3,8 +3,10 @@
 namespace SpiritSystems\DayByDay\Contacts\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use SpiritSystems\DayByDay\Contacts\Pipes\MenuProviderPipe;
+use SpiritSystems\DayByDay\Core\Services\MenuService;
 
-class AppServiceProvider extends ServiceProvider
+class DayByDayServiceProvider extends ServiceProvider
 {
     /**
      * Bootstrap any application services.
@@ -13,6 +15,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        MenuService::addProvider(MenuProviderPipe::class);
+        $this->loadRoutesFrom(__DIR__ . '/../Routes/web.php');
+
     }
 
     /**
